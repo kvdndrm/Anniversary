@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Kafi & Elsya · 12 Juni 2026 💕</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Great+Vibes&display=swap" rel="stylesheet"/>
+<style>
+:root{
+  --blush:#f5c6cb;--rose:#c0485a;--deep:#7a1c2e;--cream:#fdf6f0;
+  --gold:#c9a96e;--soft:#fff0f3;--sw:265px;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+html{scroll-behavior:smooth;}
+body{background:var(--cream);color:var(--deep);font-family:'Cormorant Garamond',Georgia,serif;overflow-x:hidden;}
+
+/* ═══ PETALS ═══ */
+.petals{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:hidden;}
+.petal{position:absolute;top:-60px;opacity:0;animation:fall linear infinite;}
+@keyframes fall{0%{transform:translateY(0) rotate(0deg) scale(1);opacity:.9;}100%{transform:translateY(110vh) rotate(720deg) scale(.6);opacity:0;}}
+
+/* ═══ DECORATIVE ELEMENTS ═══ */
+
+/* Corner ornaments */
+.corner-deco{position:absolute;pointer-events:none;z-index:2;}
+.corner-deco svg{display:block;}
+
+/* Floating sparkles */
+.sparkle{position:absolute;pointer-events:none;animation:sparkle-anim ease-in-out infinite;}
+@keyframes sparkle-anim{0%,100%{opacity:0;transform:scale(0) rotate(0deg);}50%{opacity:1;transform:scale(1) rotate(180deg);}}
+
+/* Divider ornament */
+.ornament-divider{display:flex;align-items:center;gap:1rem;margin:2rem auto;max-width:300px;}
+.ornament-divider::before,.ornament-divider::after{content:'';flex:1;height:1px;background:linear-gradient(to right,transparent,var(--gold));}
+.ornament-divider::after{background:linear-gradient(to left,transparent,var(--gold));}
+.ornament-divider span{color:var(--gold);font-size:1.1rem;white-space:nowrap;}
+
+/* Floral border top */
+.floral-top{position:relative;overflow:visible;}
+.floral-top::before{
+  content:'❧ ✿ ❧ ✿ ❧ ✿ ❧ ✿ ❧ ✿ ❧ ✿ ❧ ✿ ❧ ✿ ❧';
+  display:block;text-align:center;
+  font-size:1rem;color:rgba(192,72,90,.25);
+  letter-spacing:.5rem;padding:.5rem 0;
+  overflow:hidden;
+}
+
+/* Decorative dots pattern */
+.dot-pattern{
+  position:absolute;pointer-events:none;
+  background-image:radial-gradient(circle,rgba(192,72,90,.12) 1px,transparent 1px);
+  background-size:20px 20px;
+}
+
+/* Wavy section divider */
+.wave-divider{width:100%;overflow:hidden;line-height:0;position:relative;z-index:2;}
+.wave-divider svg{display:block;width:100%;}
+
+/* Ribbon badge */
+.ribbon-badge{
+  display:inline-block;
+  background:linear-gradient(135deg,var(--rose),var(--deep));
+  color:#fff;font-size:.75rem;letter-spacing:.3em;text-transform:uppercase;
+  padding:.4rem 2rem;
+  clip-path:polygon(8px 0%,calc(100% - 8px) 0%,100% 50%,calc(100% - 8px) 100%,8px 100%,0% 50%);
+  margin-bottom:1rem;
+}
+
+/* Lace border */
+.lace-border{
+  border-top:3px double var(--blush);
+  border-bottom:3px double var(--blush);
+  padding:3px 0;
+}
+.lace-border-inner{
+  border-top:1px solid rgba(192,72,90,.2);
+  border-bottom:1px solid rgba(192,72,90,.2);
+}
+
+/* Gold frame */
+.gold-frame{
+  position:relative;
+  border:2px solid var(--gold);
+  padding:2.5rem;
+}
+.gold-frame::before,.gold-frame::after{
+  content:'';position:absolute;width:16px;height:16px;
+  border-color:var(--rose);border-style:solid;
+}
+.gold-frame::before{top:-4px;left:-4px;border-width:3px 0 0 3px;}
+.gold-frame::after{bottom:-4px;right:-4px;border-width:0 3px 3px 0;}
+.gold-frame .gf-corner-tr,.gold-frame .gf-corner-bl{
+  position:absolute;width:16px;height:16px;border-color:var(--rose);border-style:solid;
+}
+.gold-frame .gf-corner-tr{top:-4px;right:-4px;border-width:3px 3px 0 0;}
+.gold-frame .gf-corner-bl{bottom:-4px;left:-4px;border-width:0 0 3px 3px;}
+
+/* ═══ SIDEBAR ═══ */
+.sidebar{
+  position:fixed;top:0;left:0;width:var(--sw);height:100vh;
+  background:linear-gradient(180deg,#2e0a13 0%,#5a1525 50%,#3e0e19 100%);
+  z-index:100;display:flex;flex-direction:column;align-items:center;
+  padding:2.5rem 1.2rem 2rem;
+  box-shadow:4px 0 40px rgba(122,28,46,.3);
+  transition:transform .35s cubic-bezier(.4,0,.2,1);
+  overflow:hidden;
+}
+.sidebar.hidden{transform:translateX(calc(-1 * var(--sw)));}
+
+/* Sidebar decorative lines */
+.sidebar::before{
+  content:'';position:absolute;top:0;left:0;right:0;bottom:0;
+  background:
+    linear-gradient(rgba(201,169,110,.06) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(201,169,110,.06) 1px,transparent 1px);
+  background-size:30px 30px;
+  pointer-events:none;
+}
+.sidebar::after{
+  content:'';position:absolute;top:0;left:0;right:0;height:3px;
+  background:linear-gradient(to right,transparent,var(--gold),transparent);
+}
+
+/* Sidebar top ornament */
+.sb-ornament{
+  font-size:1.4rem;color:rgba(201,169,110,.4);
+  letter-spacing:.3rem;margin-bottom:1rem;
+}
+
+.sb-logo{
+  font-family:'Great Vibes',cursive;font-size:2rem;
+  color:var(--gold);text-align:center;line-height:1.2;margin-bottom:.2rem;
+  position:relative;z-index:1;
+}
+.sb-names{
+  font-size:.95rem;color:rgba(255,255,255,.55);
+  text-align:center;margin-bottom:.3rem;
+  font-style:italic;
+}
+.sb-sub{
+  font-size:.65rem;letter-spacing:.35em;text-transform:uppercase;
+  color:rgba(255,255,255,.3);margin-bottom:1.5rem;
+}
+.sb-div{
+  width:80%;margin-bottom:1.5rem;position:relative;
+  display:flex;align-items:center;justify-content:center;
+}
+.sb-div::before,.sb-div::after{
+  content:'';flex:1;height:1px;
+  background:linear-gradient(to right,transparent,rgba(201,169,110,.4),transparent);
+}
+.sb-div span{color:rgba(201,169,110,.5);font-size:.8rem;padding:0 .5rem;}
+
+.nav-links{width:100%;display:flex;flex-direction:column;gap:.35rem;position:relative;z-index:1;}
+.nbtn{
+  display:flex;align-items:center;gap:.75rem;width:100%;
+  padding:.8rem 1.1rem;border:none;border-radius:10px;
+  background:transparent;color:rgba(255,255,255,.55);
+  font-family:'Cormorant Garamond',serif;font-size:1.05rem;
+  cursor:pointer;transition:all .2s;text-align:left;
+  position:relative;overflow:hidden;
+}
+.nbtn::before{
+  content:'';position:absolute;left:0;top:0;bottom:0;width:3px;
+  background:var(--gold);border-radius:0 3px 3px 0;
+  transform:scaleY(0);transition:transform .2s;
+}
+.nbtn .ic{font-size:1.15rem;flex-shrink:0;}
+.nbtn:hover{background:rgba(255,255,255,.07);color:#fff;transform:translateX(4px);}
+.nbtn.on{background:rgba(201,169,110,.15);color:var(--gold);}
+.nbtn.on::before{transform:scaleY(1);}
+
+.sb-foot{
+  margin-top:auto;font-size:.72rem;color:rgba(255,255,255,.18);
+  text-align:center;line-height:1.8;position:relative;z-index:1;
+  border-top:1px solid rgba(255,255,255,.06);padding-top:1rem;width:100%;
+}
+
+/* TOGGLE */
+.tog{
+  position:fixed;top:1.2rem;left:calc(var(--sw) + 1rem);z-index:200;
+  width:40px;height:40px;border-radius:50%;border:none;
+  background:var(--rose);color:#fff;font-size:1.1rem;cursor:pointer;
+  box-shadow:0 4px 18px rgba(192,72,90,.4);
+  transition:left .35s cubic-bezier(.4,0,.2,1),background .2s,transform .2s;
+  display:flex;align-items:center;justify-content:center;
+}
+.tog.out{left:1rem;}
+.tog:hover{background:var(--deep);transform:scale(1.1);}
+
+/* MAIN */
+.main{margin-left:var(--sw);transition:margin-left .35s cubic-bezier(.4,0,.2,1);min-height:100vh;position:relative;z-index:1;}
+.main.wide{margin-left:0;}
+
+/* PAGES */
+.page{display:none;animation:pfade .5s ease;position:relative;overflow:hidden;isolation:isolate;}
+.page.on{display:block;}
+@keyframes pfade{from{opacity:0;transform:translateY(20px);}to{opacity:1;transform:translateY(0);}}
+
+/* REVEAL */
+.reveal{opacity:0;transform:translateY(40px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.vis{opacity:1;transform:translateY(0);}
+
+/* ════════════════════════════════════════
+   HOME PAGE
+════════════════════════════════════════ */
+.hero{
+  position:relative;min-height:100vh;
+  display:flex;flex-direction:column;align-items:center;justify-content:center;
+  text-align:center;padding:2rem;
+  background:radial-gradient(ellipse at 50% 25%,#ffe0e9 0%,#fdf0f3 40%,var(--cream) 75%);
+  overflow:hidden;
+}
+
+/* Hero dot pattern */
+.hero .dot-pattern{
+  inset:0;opacity:.6;
+}
+
+/* Hero decorative circles */
+.hero-circle{
+  position:absolute;border-radius:50%;
+  background:radial-gradient(circle,rgba(192,72,90,.08),transparent 70%);
+  pointer-events:none;animation:float ease-in-out infinite;
+}
+@keyframes float{0%,100%{transform:translateY(0) scale(1);}50%{transform:translateY(-20px) scale(1.05);}}
+
+/* SVG corner deco in hero */
+.hero-corner{position:absolute;pointer-events:none;opacity:.35;}
+
+.hero-monogram{
+  font-family:'Great Vibes',cursive;
+  font-size:clamp(1.1rem,2.5vw,1.5rem);
+  color:var(--gold);letter-spacing:.2em;
+  margin-bottom:.8rem;
+  animation:fup .9s ease both;
+}
+.dlabel{
+  font-family:'Great Vibes',cursive;
+  font-size:clamp(3.5rem,10vw,7.5rem);color:var(--rose);
+  line-height:1.05;animation:fup .9s .15s ease both;
+  text-shadow:0 4px 30px rgba(192,72,90,.2),0 2px 4px rgba(122,28,46,.08);
+  position:relative;z-index:1;
+}
+.dsub{
+  font-size:clamp(.9rem,2vw,1.2rem);letter-spacing:.4em;text-transform:uppercase;
+  color:var(--gold);margin-top:.5rem;animation:fup .9s .3s ease both;
+}
+.hdiv{margin:1.5rem auto;font-size:2.2rem;animation:pulse 1.8s ease-in-out infinite,fup .9s .45s ease both;position:relative;z-index:1;}
+@keyframes pulse{0%,100%{transform:scale(1);}50%{transform:scale(1.2);}}
+.hero-quote{
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:clamp(1.1rem,2.5vw,1.7rem);max-width:580px;line-height:1.8;
+  color:var(--deep);animation:fup .9s .6s ease both;
+  position:relative;z-index:1;
+}
+.hero-quote::before{content:'\201C';font-size:4rem;color:var(--blush);line-height:0;vertical-align:-1.5rem;margin-right:.2rem;font-style:normal;}
+.hero-quote::after{content:'\201D';font-size:4rem;color:var(--blush);line-height:0;vertical-align:-1.5rem;margin-left:.2rem;font-style:normal;}
+
+.hero-names{
+  margin-top:2rem;font-family:'Great Vibes',cursive;
+  font-size:clamp(1.8rem,4vw,2.8rem);color:var(--rose);
+  animation:fup .9s .75s ease both;
+  position:relative;z-index:1;
+}
+.hero-names span{color:var(--gold);}
+
+.shint{position:absolute;bottom:2rem;font-size:.8rem;letter-spacing:.25em;text-transform:uppercase;color:var(--rose);opacity:.5;animation:bnc 2s infinite;}
+@keyframes bnc{0%,100%{transform:translateY(0);}50%{transform:translateY(8px);}}
+@keyframes fup{from{opacity:0;transform:translateY(32px);}to{opacity:1;transform:translateY(0);}}
+
+/* ── SECTION BASE ── */
+section{position:relative;z-index:1;padding:5rem 1.5rem;overflow:hidden;}
+.si{max-width:860px;margin:0 auto;position:relative;}
+.stag{font-size:.78rem;letter-spacing:.45em;text-transform:uppercase;color:var(--gold);margin-bottom:.8rem;}
+.stitle{font-family:'Playfair Display',serif;font-size:clamp(1.9rem,4.5vw,3rem);color:var(--rose);margin-bottom:1.5rem;line-height:1.2;}
+
+/* ── REASONS ── */
+.rsec{background:linear-gradient(160deg,#fff8f9 0%,#fdf6f0 100%);}
+.rsec .dot-pattern{right:0;top:0;width:200px;height:200px;opacity:.4;}
+
+.rgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.4rem;margin-top:2.5rem;}
+.rcard{
+  background:#fff;border:1px solid #f3c0ca;border-radius:18px;
+  padding:1.8rem 1.5rem;
+  box-shadow:0 4px 20px rgba(192,72,90,.06),0 1px 3px rgba(192,72,90,.08);
+  transition:transform .3s,box-shadow .3s;
+  position:relative;overflow:hidden;
+}
+.rcard::after{
+  content:'';position:absolute;bottom:0;left:0;right:0;height:3px;
+  background:linear-gradient(to right,var(--blush),var(--rose),var(--blush));
+  transform:scaleX(0);transform-origin:left;transition:transform .35s;
+}
+.rcard:hover::after{transform:scaleX(1);}
+.rcard:hover{transform:translateY(-5px);box-shadow:0 16px 45px rgba(192,72,90,.13);}
+.rnum{font-family:'Great Vibes',cursive;font-size:3.2rem;color:var(--blush);line-height:1;margin-bottom:.25rem;}
+.rtxt{font-size:1.05rem;line-height:1.75;color:var(--deep);}
+
+/* ── WAVE ── */
+.wave-top{position:absolute;top:0;left:0;right:0;pointer-events:none;}
+.wave-bot{position:absolute;bottom:0;left:0;right:0;pointer-events:none;}
+
+/* ── TIMELINE ── */
+.tsec{background:linear-gradient(135deg,#fff0f3 0%,#fdf6f0 100%);padding-top:6rem;}
+.tl{position:relative;margin-top:2.5rem;padding-left:2.2rem;}
+.tl::before{content:'';position:absolute;left:0;top:0;bottom:0;width:2px;background:linear-gradient(to bottom,var(--blush),var(--rose),var(--blush));border-radius:2px;}
+.titem{position:relative;margin-bottom:2.8rem;padding-left:1.6rem;}
+.titem::before{
+  content:'♥';position:absolute;left:-1.65rem;top:2px;
+  color:var(--rose);font-size:.9rem;
+  background:#fff0f3;width:22px;height:22px;
+  display:flex;align-items:center;justify-content:center;
+  border-radius:50%;border:1.5px solid var(--blush);
+  box-shadow:0 0 0 4px rgba(245,198,203,.2);
+}
+.tdate{font-size:.78rem;letter-spacing:.22em;text-transform:uppercase;color:var(--gold);margin-bottom:.3rem;}
+.tev{font-family:'Playfair Display',serif;font-size:1.2rem;color:var(--rose);margin-bottom:.4rem;}
+.tdesc{font-size:1rem;line-height:1.75;color:#5a2030;}
+
+/* ── CLOSING ── */
+.csec{
+  text-align:center;padding:5rem 1.5rem;
+  background:radial-gradient(ellipse at 50% 0%,#ffdce4 0%,var(--cream) 65%);
+  position:relative;overflow:hidden;
+}
+.csec .dot-pattern{inset:0;opacity:.3;}
+.bh{font-size:clamp(4.5rem,12vw,9rem);animation:pulse 2s ease-in-out infinite;display:block;margin:0 auto 1.5rem;line-height:1;}
+.ctitle{font-family:'Great Vibes',cursive;font-size:clamp(2.3rem,6vw,5rem);color:var(--rose);margin-bottom:1rem;}
+.cquote{font-family:'Playfair Display',serif;font-style:italic;font-size:clamp(1.05rem,2.2vw,1.55rem);color:var(--deep);max-width:520px;margin:0 auto 2rem;line-height:1.9;}
+.sig{font-family:'Great Vibes',cursive;font-size:clamp(1.8rem,4vw,3rem);color:var(--gold);}
+
+footer{text-align:center;padding:1.5rem;font-size:.78rem;color:var(--rose);opacity:.4;letter-spacing:.12em;background:var(--cream);}
+
+/* ════════════════════════════════════════
+   GALLERY PAGE
+════════════════════════════════════════ */
+#pg-gallery{
+  background:linear-gradient(160deg,#12040a 0%,#1f0810 60%,#0e0308 100%);
+  min-height:100vh;padding:5rem 1.5rem;position:relative;overflow:hidden;
+}
+
+/* Gallery bg decoration */
+#pg-gallery::before{
+  content:'';position:absolute;inset:0;
+  background:
+    radial-gradient(ellipse at 20% 20%,rgba(192,72,90,.08) 0%,transparent 50%),
+    radial-gradient(ellipse at 80% 80%,rgba(201,169,110,.05) 0%,transparent 50%);
+  pointer-events:none;
+}
+
+/* Twinkling stars */
+.star{position:absolute;border-radius:50%;background:#fff;pointer-events:none;animation:twinkle ease-in-out infinite;}
+@keyframes twinkle{0%,100%{opacity:0;}50%{opacity:1;}}
+
+.ghead{text-align:center;margin-bottom:3rem;position:relative;}
+.ghead h1{font-family:'Great Vibes',cursive;font-size:clamp(3rem,8vw,5.5rem);color:var(--gold);text-shadow:0 0 40px rgba(201,169,110,.3);}
+.ghead p{color:rgba(255,255,255,.35);font-size:.8rem;letter-spacing:.25em;text-transform:uppercase;margin-top:.4rem;}
+
+/* Golden frame around header */
+.ghead-frame{
+  display:inline-block;padding:.5rem 2rem;
+  border-top:1px solid rgba(201,169,110,.3);
+  border-bottom:1px solid rgba(201,169,110,.3);
+  margin-top:.5rem;
+}
+
+.ggrid{
+  max-width:1000px;margin:0 auto;
+  display:grid;grid-template-columns:repeat(3,1fr);
+  grid-auto-rows:220px;gap:10px;position:relative;
+}
+.gi{position:relative;border-radius:12px;overflow:hidden;background:#2d0f1d;cursor:pointer;transition:transform .3s,box-shadow .3s;}
+.gi:hover{transform:scale(1.025);box-shadow:0 12px 50px rgba(201,169,110,.2),0 0 0 1px rgba(201,169,110,.15);}
+.ggrid .gi:nth-child(1){grid-column:span 2;}
+.ggrid .gi:nth-child(4){grid-row:span 2;}
+
+.gph{width:100%;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.5rem;background:linear-gradient(135deg,#3a0d18,#5c1a2a);color:rgba(255,255,255,.25);font-size:.8rem;text-align:center;padding:1rem;}
+.gph .gic{font-size:2.5rem;opacity:.45;}
+.gph .glb{font-family:'Playfair Display',serif;font-style:italic;font-size:.95rem;color:rgba(255,255,255,.4);}
+.gi img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .45s;}
+.gi:hover img{transform:scale(1.07);}
+.gov{position:absolute;inset:0;background:linear-gradient(to top,rgba(15,4,10,.85) 0%,transparent 55%);display:flex;align-items:flex-end;padding:1.1rem;opacity:0;transition:opacity .3s;}
+.gi:hover .gov{opacity:1;}
+.gov span{color:#fff;font-family:'Playfair Display',serif;font-style:italic;font-size:.95rem;}
+
+/* Gold corner on each grid item */
+.gi::before,.gi::after{
+  content:'';position:absolute;width:12px;height:12px;
+  border-color:rgba(201,169,110,.5);border-style:solid;
+  z-index:3;pointer-events:none;opacity:0;transition:opacity .3s;
+}
+.gi::before{top:6px;left:6px;border-width:1.5px 0 0 1.5px;}
+.gi::after{bottom:6px;right:6px;border-width:0 1.5px 1.5px 0;}
+.gi:hover::before,.gi:hover::after{opacity:1;}
+
+.lbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.93);z-index:999;align-items:center;justify-content:center;}
+.lbox.open{display:flex;}
+.lbox img{max-width:90vw;max-height:85vh;border-radius:8px;object-fit:contain;box-shadow:0 0 60px rgba(201,169,110,.1);}
+.lclose{position:absolute;top:1.5rem;right:1.5rem;background:none;border:1px solid rgba(255,255,255,.2);color:#fff;font-size:1.5rem;cursor:pointer;width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;transition:all .2s;}
+.lclose:hover{background:var(--rose);border-color:var(--rose);transform:rotate(90deg);}
+
+.gnote{max-width:700px;margin:2rem auto 0;background:rgba(255,255,255,.03);border:1px dashed rgba(201,169,110,.2);border-radius:10px;padding:1rem 1.4rem;font-size:.82rem;color:rgba(255,255,255,.3);line-height:1.7;text-align:center;}
+
+/* ════════════════════════════════════════
+   LETTER PAGE
+════════════════════════════════════════ */
+#pg-letter{
+  min-height:100vh;
+  position:relative;
+  overflow:hidden;
+}
+
+/* Floating decorations on letter page */
+.letter-deco{position:absolute;pointer-events:none;font-size:2rem;opacity:.08;animation:float ease-in-out infinite;}
+
+.lwrap{max-width:680px;width:100%;background:#fffef9;border-radius:4px;box-shadow:0 20px 80px rgba(122,28,46,.15),0 2px 8px rgba(122,28,46,.06);position:relative;overflow:hidden;}
+
+/* Paper texture overlay */
+.lwrap::before{
+  content:'';position:absolute;inset:0;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23n)' opacity='.03'/%3E%3C/svg%3E");
+  pointer-events:none;z-index:0;
+}
+
+.ltop{
+  background:linear-gradient(135deg,#8b1c30 0%,var(--deep) 50%,#4a0e1c 100%);
+  padding:2rem 2.5rem 1.8rem;text-align:center;position:relative;overflow:hidden;
+}
+.ltop::before{
+  content:'✦ ✦ ✦';position:absolute;top:.5rem;width:100%;text-align:center;
+  font-size:.9rem;color:rgba(201,169,110,.3);letter-spacing:1rem;
+}
+.ltop::after{
+  content:'✦ ✦ ✦';position:absolute;bottom:.5rem;width:100%;text-align:center;
+  font-size:.9rem;color:rgba(201,169,110,.3);letter-spacing:1rem;
+}
+.ltop h2{font-family:'Great Vibes',cursive;font-size:3.2rem;color:#fff;text-shadow:0 2px 10px rgba(0,0,0,.2);}
+.ltop .lfor{font-size:.78rem;letter-spacing:.3em;text-transform:uppercase;color:rgba(255,255,255,.45);margin-top:.3rem;}
+.ltop .lnames{font-family:'Great Vibes',cursive;font-size:1.4rem;color:rgba(255,255,255,.7);margin-top:.3rem;}
+
+.lseal{display:flex;align-items:center;justify-content:center;width:64px;height:64px;background:linear-gradient(135deg,#fff5f0,#fff);border-radius:50%;font-size:2rem;margin:0 auto;transform:translateY(32px);box-shadow:0 4px 25px rgba(122,28,46,.25),0 0 0 4px rgba(201,169,110,.15);}
+
+.llines{
+  position:absolute;pointer-events:none;
+  background-image:repeating-linear-gradient(transparent,transparent 31px,rgba(192,72,90,.07) 31px,rgba(192,72,90,.07) 32px);
+  top:220px;left:0;right:0;bottom:0;
+}
+
+.lbody{padding:3.5rem 2.5rem 2.5rem;position:relative;z-index:1;}
+.ldt{text-align:right;font-size:.82rem;color:var(--gold);letter-spacing:.12em;margin-bottom:1.5rem;}
+.lgr{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--rose);margin-bottom:1.2rem;}
+.ltxt{font-size:1.08rem;line-height:2.05;color:#3d0e1a;margin-bottom:.8rem;}
+.lsign{margin-top:2.2rem;text-align:right;border-top:1px solid #f5dde2;padding-top:1.2rem;}
+.lsign p{font-size:.88rem;color:#bbb;margin-bottom:.3rem;}
+.lsign span{font-family:'Great Vibes',cursive;font-size:2.6rem;color:var(--rose);}
+
+/* Wax seal decoration */
+.wax-deco{position:absolute;bottom:1.5rem;left:2rem;font-size:2rem;opacity:.15;transform:rotate(-15deg);}
+
+/* ════════════════════════════════════════
+   QUIZ PAGE
+════════════════════════════════════════ */
+#pg-quiz{
+  min-height:100vh;
+  background:linear-gradient(160deg,#2e0812 0%,#1a0710 40%,#0c0306 100%);
+  padding:4rem 1.5rem;position:relative;overflow:hidden;
+}
+#pg-quiz::before{
+  content:'';position:absolute;inset:0;
+  background:radial-gradient(ellipse at 50% 0%,rgba(192,72,90,.12) 0%,transparent 60%);
+  pointer-events:none;
+}
+
+/* Decorative arches */
+.quiz-arch{
+  position:absolute;top:-80px;left:50%;transform:translateX(-50%);
+  width:400px;height:160px;
+  border:1px solid rgba(201,169,110,.08);
+  border-bottom:none;border-radius:200px 200px 0 0;
+  pointer-events:none;
+}
+
+.qhead{text-align:center;margin-bottom:3rem;position:relative;}
+.qhead h1{font-family:'Great Vibes',cursive;font-size:clamp(2.5rem,7vw,4.8rem);color:var(--gold);text-shadow:0 0 40px rgba(201,169,110,.25);}
+.qhead p{color:rgba(255,255,255,.35);font-size:.8rem;letter-spacing:.25em;text-transform:uppercase;margin-top:.4rem;}
+.qhead-sub{font-family:'Playfair Display',serif;font-style:italic;font-size:1rem;color:rgba(255,255,255,.25);margin-top:.3rem;}
+
+.qcard{
+  max-width:620px;margin:0 auto;
+  background:rgba(255,255,255,.04);
+  backdrop-filter:blur(12px);
+  border:1px solid rgba(201,169,110,.15);
+  border-radius:22px;padding:2.5rem;
+  box-shadow:0 20px 60px rgba(0,0,0,.3),inset 0 1px 0 rgba(255,255,255,.05);
+  position:relative;overflow:hidden;
+}
+.qcard::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:1px;
+  background:linear-gradient(to right,transparent,rgba(201,169,110,.3),transparent);
+}
+
+.qbar{height:3px;background:rgba(255,255,255,.08);border-radius:2px;margin-bottom:2rem;overflow:hidden;}
+.qfill{height:100%;background:linear-gradient(to right,var(--rose),var(--gold));border-radius:2px;transition:width .5s ease;}
+.qnum{font-size:.75rem;letter-spacing:.35em;text-transform:uppercase;color:rgba(201,169,110,.6);margin-bottom:.8rem;}
+.qq{font-family:'Playfair Display',serif;font-size:clamp(1.25rem,3vw,1.75rem);color:#fff;margin-bottom:2rem;line-height:1.55;}
+.qopts{display:flex;flex-direction:column;gap:.75rem;}
+.qopt{
+  padding:.95rem 1.4rem;
+  background:rgba(255,255,255,.05);border:1.5px solid rgba(255,255,255,.1);
+  border-radius:12px;color:rgba(255,255,255,.75);
+  font-family:'Cormorant Garamond',serif;font-size:1.1rem;
+  cursor:pointer;text-align:left;transition:all .2s;
+  position:relative;overflow:hidden;
+}
+.qopt::before{content:'';position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--rose);transform:scaleY(0);transition:transform .2s;}
+.qopt:hover{background:rgba(192,72,90,.15);border-color:rgba(192,72,90,.4);color:#fff;transform:translateX(6px);}
+.qopt:hover::before{transform:scaleY(1);}
+.qopt.cor{background:rgba(80,180,100,.15);border-color:#50b464;color:#7dffab;pointer-events:none;}
+.qopt.cor::before{background:#50b464;transform:scaleY(1);}
+.qopt.wrg{background:rgba(192,72,90,.15);border-color:var(--rose);color:#ffaaaa;pointer-events:none;}
+.qopt.wrg::before{transform:scaleY(1);}
+.qopt.rev{background:rgba(80,180,100,.06);border-color:rgba(80,180,100,.3);color:rgba(125,255,171,.5);pointer-events:none;}
+
+.qfb{margin-top:1.5rem;padding:1rem 1.4rem;border-radius:12px;font-size:.98rem;line-height:1.65;display:none;}
+.qfb.show{display:block;}
+.qfb.corf{background:rgba(80,180,100,.1);color:#7dffab;border:1px solid rgba(80,180,100,.25);}
+.qfb.wrgf{background:rgba(192,72,90,.1);color:#ffaaaa;border:1px solid rgba(192,72,90,.25);}
+.qnxt{margin-top:1.5rem;padding:.9rem 2.2rem;background:linear-gradient(135deg,var(--rose),var(--deep));border:none;border-radius:50px;color:#fff;font-family:'Cormorant Garamond',serif;font-size:1.1rem;letter-spacing:.08em;cursor:pointer;display:none;transition:transform .2s,box-shadow .2s;}
+.qnxt.show{display:inline-block;}
+.qnxt:hover{transform:translateY(-3px);box-shadow:0 10px 30px rgba(192,72,90,.4);}
+
+.qres{text-align:center;display:none;animation:pfade .5s ease;}
+.qres.show{display:block;}
+.qrem{font-size:5rem;margin-bottom:1rem;}
+.qrtitle{font-family:'Great Vibes',cursive;font-size:3.2rem;color:var(--gold);margin-bottom:1rem;}
+.qrmsg{color:rgba(255,255,255,.6);font-size:1.05rem;line-height:1.85;margin-bottom:2rem;}
+.qrst{padding:.9rem 2.5rem;background:rgba(201,169,110,.12);border:1.5px solid rgba(201,169,110,.4);border-radius:50px;color:var(--gold);font-family:'Cormorant Garamond',serif;font-size:1.1rem;cursor:pointer;transition:all .2s;}
+.qrst:hover{background:var(--gold);color:#1a0710;}
+
+/* ═══ LOGOUT BUTTON ═══ */
+.logout-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: .65rem;
+  width: calc(100% - 2rem);
+  margin: 0 1rem;
+  padding: .75rem 1rem;
+  background: rgba(192,72,90,.1);
+  border: 1px solid rgba(192,72,90,.25);
+  border-radius: 10px;
+  color: rgba(255,180,190,.7);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem;
+  letter-spacing: .05em;
+  cursor: pointer;
+  transition: all .25s;
+  position: relative; z-index: 1;
+}
+.logout-btn:hover {
+  background: rgba(192,72,90,.22);
+  border-color: rgba(192,72,90,.5);
+  color: #ffb4be;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(192,72,90,.2);
+}
+.logout-icon { font-size: 1.1rem; }
+
+/* ═══ LOGOUT CONFIRM MODAL ═══ */
+.logout-modal-bg {
+  display: none;
+  position: fixed; inset: 0; z-index: 9998;
+  background: rgba(0,0,0,.6);
+  backdrop-filter: blur(6px);
+  align-items: center;
+  justify-content: center;
+  animation: modal-bg-in .25s ease;
+}
+.logout-modal-bg.open { display: flex; }
+@keyframes modal-bg-in { from{opacity:0;} to{opacity:1;} }
+
+.logout-modal {
+  position: relative;
+  width: min(380px, 90vw);
+  background: linear-gradient(160deg, #3a0d18 0%, #5a1525 100%);
+  border: 1px solid rgba(201,169,110,.2);
+  border-radius: 22px;
+  padding: 2.5rem 2rem 2rem;
+  text-align: center;
+  box-shadow: 0 30px 80px rgba(0,0,0,.5), inset 0 1px 0 rgba(255,255,255,.06);
+  animation: modal-in .35s cubic-bezier(.22,1,.36,1) both;
+  overflow: hidden;
+}
+.logout-modal::before {
+  content: '';
+  position: absolute; top: 0; left: 15%; right: 15%; height: 1px;
+  background: linear-gradient(to right, transparent, rgba(201,169,110,.4), transparent);
+}
+
+/* bg grid lines */
+.logout-modal::after {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(rgba(201,169,110,.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,169,110,.04) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+}
+
+@keyframes modal-in {
+  from { opacity:0; transform: scale(.88) translateY(20px); }
+  to   { opacity:1; transform: scale(1)   translateY(0); }
+}
+
+.lm-ornament {
+  font-size: .95rem; color: rgba(201,169,110,.3);
+  letter-spacing: .5rem; margin-bottom: 1rem;
+  position: relative; z-index: 1;
+}
+.lm-emoji {
+  font-size: 3.5rem; margin-bottom: .8rem; display: block;
+  position: relative; z-index: 1;
+}
+.lm-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 1.45rem; color: #fff;
+  margin-bottom: .6rem;
+  position: relative; z-index: 1;
+}
+.lm-desc {
+  font-size: .98rem; line-height: 1.7;
+  color: rgba(255,255,255,.45);
+  margin-bottom: 1.8rem;
+  font-style: italic;
+  position: relative; z-index: 1;
+}
+
+/* divider */
+.lm-divider {
+  display: flex; align-items: center; gap: .5rem;
+  margin-bottom: 1.5rem; position: relative; z-index: 1;
+}
+.lm-divider::before,.lm-divider::after {
+  content: ''; flex: 1; height: 1px;
+  background: linear-gradient(to right, transparent, rgba(201,169,110,.25), transparent);
+}
+.lm-divider span { color: rgba(201,169,110,.35); font-size: .8rem; }
+
+.lm-btns {
+  display: flex; gap: .8rem;
+  position: relative; z-index: 1;
+}
+.lm-cancel {
+  flex: 1; padding: .85rem;
+  background: rgba(255,255,255,.06);
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 50px;
+  color: rgba(255,255,255,.6);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem; cursor: pointer;
+  transition: all .2s;
+}
+.lm-cancel:hover {
+  background: rgba(255,255,255,.1);
+  color: #fff;
+}
+.lm-confirm {
+  flex: 1; padding: .85rem;
+  background: linear-gradient(135deg, var(--rose), var(--deep));
+  border: none; border-radius: 50px;
+  color: #fff;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1rem; cursor: pointer;
+  box-shadow: 0 6px 20px rgba(192,72,90,.35);
+  transition: all .2s;
+}
+.lm-confirm:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(192,72,90,.45);
+}
+
+/* ─── Logout fade-out overlay ─── */
+.logout-overlay {
+  position: fixed; inset: 0; z-index: 10000;
+  background: linear-gradient(135deg, var(--deep), #2e0a13);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity .4s ease;
+}
+.logout-overlay.show { opacity: 1; pointer-events: all; }
+.logout-overlay.fade-out { opacity: 0; }
+.lo-emoji { font-size: 4.5rem; margin-bottom: 1rem; animation: pulse 1.2s infinite; }
+.lo-text {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(2rem, 5vw, 3rem);
+  color: var(--gold); text-align: center;
+}
+.lo-sub {
+  font-size: .88rem; color: rgba(255,255,255,.35);
+  margin-top: .5rem; letter-spacing: .2em; text-transform: uppercase;
+}
+
+/* ═══ RESPONSIVE ═══ */
+@media(max-width:700px){
+  :root{--sw:240px;}
+  .ggrid{grid-template-columns:repeat(2,1fr);grid-auto-rows:160px;}
+  .ggrid .gi:nth-child(1){grid-column:span 2;}
+  .ggrid .gi:nth-child(4){grid-row:span 1;}
+  .lbody{padding:2.5rem 1.5rem;}
+}
+
+/* ═══════════════════════════════════════
+   LOGIN SCREEN
+═══════════════════════════════════════ */
+#login-screen {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  background: linear-gradient(160deg, #2e0a13 0%, #5a1525 45%, #3e0e19 100%);
+  transition: opacity .7s ease, transform .7s ease;
+}
+#login-screen.hide {
+  opacity: 0;
+  transform: scale(1.04);
+  pointer-events: none;
+}
+
+/* grid bg lines */
+#login-screen::before {
+  content: '';
+  position: absolute; inset: 0;
+  background:
+    linear-gradient(rgba(201,169,110,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(201,169,110,.05) 1px, transparent 1px);
+  background-size: 35px 35px;
+  pointer-events: none;
+}
+/* top gold bar */
+#login-screen::after {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 3px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+}
+
+/* floating glow orbs */
+.login-orb {
+  position: absolute; border-radius: 50%; pointer-events: none;
+  animation: orb-float ease-in-out infinite;
+}
+@keyframes orb-float {
+  0%,100% { transform: translateY(0) scale(1); }
+  50%      { transform: translateY(-30px) scale(1.06); }
+}
+
+/* corner SVG ornaments */
+.login-corner { position: absolute; pointer-events: none; opacity: .3; }
+
+/* card */
+.login-card {
+  position: relative; z-index: 2;
+  width: min(420px, 92vw);
+  background: rgba(255,255,255,.04);
+  backdrop-filter: blur(16px);
+  border: 1px solid rgba(201,169,110,.2);
+  border-radius: 24px;
+  padding: 2.8rem 2.5rem 2.5rem;
+  box-shadow: 0 30px 80px rgba(0,0,0,.4), inset 0 1px 0 rgba(255,255,255,.06);
+  animation: card-in .8s cubic-bezier(.22,1,.36,1) both;
+}
+@keyframes card-in {
+  from { opacity:0; transform: translateY(40px) scale(.97); }
+  to   { opacity:1; transform: translateY(0)   scale(1); }
+}
+/* top shimmer line on card */
+.login-card::before {
+  content:'';
+  position: absolute; top: 0; left: 10%; right: 10%; height: 1px;
+  background: linear-gradient(to right, transparent, rgba(201,169,110,.5), transparent);
+  border-radius: 1px;
+}
+
+/* ornament row */
+.lc-ornament {
+  text-align: center;
+  font-size: 1.1rem;
+  color: rgba(201,169,110,.35);
+  letter-spacing: .5rem;
+  margin-bottom: 1rem;
+}
+
+/* logo / title */
+.lc-logo {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(2.6rem, 7vw, 3.4rem);
+  color: var(--gold);
+  text-align: center;
+  line-height: 1.1;
+  text-shadow: 0 0 30px rgba(201,169,110,.25);
+  margin-bottom: .25rem;
+}
+.lc-date {
+  text-align: center;
+  font-size: .7rem;
+  letter-spacing: .4em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.3);
+  margin-bottom: .2rem;
+}
+.lc-names {
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1rem;
+  color: rgba(255,255,255,.4);
+  margin-bottom: 1.8rem;
+}
+
+/* divider */
+.lc-div {
+  display: flex; align-items: center; gap: .6rem;
+  margin-bottom: 1.8rem;
+}
+.lc-div::before,.lc-div::after {
+  content:''; flex:1; height:1px;
+  background: linear-gradient(to right, transparent, rgba(201,169,110,.3), transparent);
+}
+.lc-div span { color: rgba(201,169,110,.4); font-size: .85rem; }
+
+/* label */
+.lc-label {
+  font-size: .72rem;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,.35);
+  margin-bottom: .5rem;
+  display: block;
+}
+
+/* input */
+.lc-input-wrap {
+  position: relative;
+  margin-bottom: 1rem;
+}
+.lc-input {
+  width: 100%;
+  padding: .95rem 1.2rem .95rem 3rem;
+  background: rgba(255,255,255,.06);
+  border: 1.5px solid rgba(255,255,255,.1);
+  border-radius: 12px;
+  color: #fff;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.1rem;
+  outline: none;
+  transition: border-color .25s, background .25s, box-shadow .25s;
+  letter-spacing: .08em;
+}
+.lc-input::placeholder { color: rgba(255,255,255,.22); font-style: italic; }
+.lc-input:focus {
+  border-color: rgba(201,169,110,.5);
+  background: rgba(255,255,255,.09);
+  box-shadow: 0 0 0 3px rgba(201,169,110,.1);
+}
+.lc-input-icon {
+  position: absolute; left: 1rem; top: 50%; transform: translateY(-50%);
+  font-size: 1.1rem; pointer-events: none;
+}
+
+/* show/hide password toggle */
+.lc-eye {
+  position: absolute; right: 1rem; top: 50%; transform: translateY(-50%);
+  background: none; border: none; cursor: pointer;
+  color: rgba(255,255,255,.3); font-size: 1rem;
+  transition: color .2s; padding: .2rem;
+}
+.lc-eye:hover { color: rgba(201,169,110,.7); }
+
+/* error message */
+.lc-error {
+  display: none;
+  background: rgba(192,72,90,.15);
+  border: 1px solid rgba(192,72,90,.3);
+  border-radius: 10px;
+  padding: .7rem 1rem;
+  font-size: .9rem;
+  color: #ffaaaa;
+  margin-bottom: 1rem;
+  text-align: center;
+  animation: shake .4s ease;
+}
+.lc-error.show { display: block; }
+@keyframes shake {
+  0%,100%{transform:translateX(0);}
+  20%,60%{transform:translateX(-6px);}
+  40%,80%{transform:translateX(6px);}
+}
+
+/* hint */
+.lc-hint {
+  font-size: .82rem;
+  color: rgba(255,255,255,.2);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  font-style: italic;
+}
+
+/* submit button */
+.lc-btn {
+  width: 100%;
+  padding: 1rem;
+  background: linear-gradient(135deg, var(--rose) 0%, var(--deep) 100%);
+  border: none; border-radius: 50px;
+  color: #fff;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.15rem;
+  letter-spacing: .12em;
+  cursor: pointer;
+  position: relative; overflow: hidden;
+  transition: transform .2s, box-shadow .2s;
+  box-shadow: 0 8px 25px rgba(192,72,90,.35);
+}
+.lc-btn::before {
+  content:'';
+  position: absolute; inset: 0;
+  background: linear-gradient(135deg, rgba(255,255,255,.15), transparent);
+  opacity: 0; transition: opacity .2s;
+}
+.lc-btn:hover { transform: translateY(-2px); box-shadow: 0 14px 35px rgba(192,72,90,.45); }
+.lc-btn:hover::before { opacity: 1; }
+.lc-btn:active { transform: translateY(0); }
+
+/* footer tagline */
+.lc-footer {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-family: 'Great Vibes', cursive;
+  font-size: 1.3rem;
+  color: rgba(201,169,110,.35);
+}
+
+/* ── SUCCESS OVERLAY ── */
+.login-success-overlay {
+  position: fixed; inset: 0; z-index: 10000;
+  background: linear-gradient(135deg, var(--deep), #2e0a13);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  opacity: 0; pointer-events: none;
+  transition: opacity .4s ease;
+}
+.login-success-overlay.show {
+  opacity: 1; pointer-events: all;
+}
+.login-success-overlay.fade-out {
+  opacity: 0;
+}
+.lso-heart {
+  font-size: 5rem;
+  animation: pulse 1s ease-in-out infinite;
+  margin-bottom: 1rem;
+}
+.lso-text {
+  font-family: 'Great Vibes', cursive;
+  font-size: clamp(2rem, 6vw, 3.5rem);
+  color: var(--gold);
+  text-align: center;
+}
+.lso-sub {
+  font-size: 1rem;
+  color: rgba(255,255,255,.4);
+  margin-top: .5rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+}
+
+</style>
+</head>
+<body>
+
+<!-- ════ LOGIN SCREEN ════ -->
+<div id="login-screen">
+
+  <!-- Glow orbs -->
+  <div class="login-orb" style="width:400px;height:400px;top:-100px;right:-100px;background:radial-gradient(circle,rgba(192,72,90,.1),transparent 70%);animation-duration:9s;"></div>
+  <div class="login-orb" style="width:300px;height:300px;bottom:-80px;left:-80px;background:radial-gradient(circle,rgba(201,169,110,.08),transparent 70%);animation-duration:7s;animation-delay:-3s;"></div>
+
+  <!-- Corner ornaments -->
+  <svg class="login-corner" style="top:20px;left:20px;width:70px;height:70px;" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5 5 L5 35 M5 5 L35 5" stroke="#c9a96e" stroke-width="1.5"/>
+    <path d="M12 12 L12 25 M12 12 L25 12" stroke="#c0485a" stroke-width="1" opacity=".6"/>
+    <circle cx="5" cy="5" r="2.5" fill="#c9a96e"/>
+  </svg>
+  <svg class="login-corner" style="top:20px;right:20px;width:70px;height:70px;transform:scaleX(-1);" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5 5 L5 35 M5 5 L35 5" stroke="#c9a96e" stroke-width="1.5"/>
+    <path d="M12 12 L12 25 M12 12 L25 12" stroke="#c0485a" stroke-width="1" opacity=".6"/>
+    <circle cx="5" cy="5" r="2.5" fill="#c9a96e"/>
+  </svg>
+  <svg class="login-corner" style="bottom:20px;left:20px;width:70px;height:70px;transform:scaleY(-1);" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5 5 L5 35 M5 5 L35 5" stroke="#c9a96e" stroke-width="1.5"/>
+    <path d="M12 12 L12 25 M12 12 L25 12" stroke="#c0485a" stroke-width="1" opacity=".6"/>
+    <circle cx="5" cy="5" r="2.5" fill="#c9a96e"/>
+  </svg>
+  <svg class="login-corner" style="bottom:20px;right:20px;width:70px;height:70px;transform:scale(-1);" viewBox="0 0 70 70" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M5 5 L5 35 M5 5 L35 5" stroke="#c9a96e" stroke-width="1.5"/>
+    <path d="M12 12 L12 25 M12 12 L25 12" stroke="#c0485a" stroke-width="1" opacity=".6"/>
+    <circle cx="5" cy="5" r="2.5" fill="#c9a96e"/>
+  </svg>
+
+  <!-- Card -->
+  <div class="login-card">
+    <div class="lc-ornament">✦ ✦ ✦</div>
+    <div class="lc-logo">Kafi &amp; Elsya</div>
+    <div class="lc-date">12 Juni 2026 · Satu Tahun</div>
+    <div class="lc-names">Selamat datang Elsya Putri Azzahra 🌸</div>
+
+    <div class="lc-div"><span>❧</span></div>
+
+    <span class="lc-label">Nama Panggilan</span>
+    <div class="lc-input-wrap">
+      <span class="lc-input-icon">🌸</span>
+      <input class="lc-input" id="lc-name" type="text"
+             placeholder="Siapa namamu?"
+             autocomplete="off" spellcheck="false"/>
+    </div>
+
+    <span class="lc-label">Password Spesial</span>
+    <div class="lc-input-wrap">
+      <span class="lc-input-icon">🔑</span>
+      <input class="lc-input" id="lc-pass" type="password"
+             placeholder="Masukkan password"
+             autocomplete="off"/>
+      <button class="lc-eye" id="lc-eye-btn" onclick="togglePass()" type="button">👁</button>
+    </div>
+
+    <div class="lc-error" id="lc-error">
+      ✕ &nbsp;Hmm, coba ingat-ingat lagi ya sayang~
+    </div>
+
+    <p class="lc-hint">Clue: Jadian 💕</p>
+
+    <button class="lc-btn" onclick="doLogin()">
+      Masuk ke Dunia Kita &nbsp;💕
+    </button>
+
+    <div class="lc-footer">Kafi for Elsya ✦ 2026</div>
+  </div>
+</div>
+
+<!-- Success flash -->
+<div class="login-success-overlay" id="login-success">
+  <div class="lso-heart">💖</div>
+  <div class="lso-text">Selamat Datang Elsya!</div>
+  <div class="lso-sub">Membuka kejutanmu...</div>
+</div>
+
+<div class="petals" id="petals"></div>
+
+<!-- ════ SIDEBAR ════ -->
+<nav class="sidebar" id="sidebar">
+  <div class="sb-ornament">✦ ✦ ✦</div>
+  <div class="sb-logo">12 Juni 2026</div>
+  <div class="sb-names">From Your Boyfriend</div>
+  <div class="sb-sub">Happy Anniversary</div>
+  <div class="sb-div"><span>✿</span></div>
+  <div class="nav-links">
+    <button class="nbtn on" id="n-home" onclick="goTo('home')"><span class="ic">🏠</span>Beranda</button>
+    <button class="nbtn" id="n-gallery" onclick="goTo('gallery')"><span class="ic">📸</span>Galeri Foto</button>
+    <button class="nbtn" id="n-letter" onclick="goTo('letter')"><span class="ic">💌</span>Surat Cinta</button>
+    <button class="nbtn" id="n-quiz" onclick="goTo('quiz')"><span class="ic">💝</span>Quiz Tentang Kita</button>
+  </div>
+
+  <!-- Divider sebelum logout -->
+  <div class="sb-div" style="margin-top:1.2rem;margin-bottom:1rem;"><span>✦</span></div>
+
+  <!-- Tombol Logout -->
+  <button class="logout-btn" onclick="showLogout()">
+    <span class="logout-icon">🚪</span>
+    <span>Keluar</span>
+  </button>
+
+  <div class="sb-foot">
+    ❧ From Kafi <br>dibuat sepenuh hati buat Elsya ❧
+  </div>
+</nav>
+<button class="tog" id="tog" onclick="toggleSB()">☰</button>
+
+<!-- ════ LOGOUT CONFIRM MODAL ════ -->
+<div class="logout-modal-bg" id="logout-modal-bg">
+  <div class="logout-modal">
+    <div class="lm-ornament">✦ ✦ ✦</div>
+    <span class="lm-emoji">🚪💕</span>
+    <h2 class="lm-title">Mau keluar dulu Elsya?</h2>
+    <p class="lm-desc">
+      Kamu bisa kembali kapan saja ya,<br>
+      website ini selalu menunggu kamu 🌸
+    </p>
+    <div class="lm-divider"><span>❧</span></div>
+    <div class="lm-btns">
+      <button class="lm-cancel" onclick="hideLogout()">Batal, tetap di sini</button>
+      <button class="lm-confirm" onclick="doLogout()">Ya, keluar 🚪</button>
+    </div>
+  </div>
+</div>
+
+<!-- Logout transition overlay -->
+<div class="logout-overlay" id="logout-overlay">
+  <div class="lo-emoji">👋</div>
+  <div class="lo-text">Sampai jumpa Elsya!</div>
+  <div class="lo-sub">Kembali ke halaman login...</div>
+</div>
+
+<!-- ════ MAIN ════ -->
+<div class="main" id="main">
+
+<!-- ══ HOME ══ -->
+<div class="page on" id="pg-home">
+  <div class="hero">
+    <div class="dot-pattern" style="inset:0;"></div>
+
+    <!-- Decorative circles -->
+    <div class="hero-circle" style="width:500px;height:500px;top:-100px;right:-150px;animation-duration:8s;"></div>
+    <div class="hero-circle" style="width:300px;height:300px;bottom:-50px;left:-80px;animation-duration:6s;animation-delay:-3s;"></div>
+
+    <!-- Corner SVG ornaments -->
+    <svg class="hero-corner" style="top:20px;left:20px;width:80px;height:80px;" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 5 L5 35 M5 5 L35 5" stroke="#c0485a" stroke-width="1.5" opacity="0.4"/>
+      <path d="M15 15 L15 28 M15 15 L28 15" stroke="#c9a96e" stroke-width="1" opacity="0.3"/>
+      <circle cx="5" cy="5" r="3" fill="#c0485a" opacity="0.3"/>
+    </svg>
+    <svg class="hero-corner" style="top:20px;right:20px;width:80px;height:80px;transform:scaleX(-1);" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 5 L5 35 M5 5 L35 5" stroke="#c0485a" stroke-width="1.5" opacity="0.4"/>
+      <path d="M15 15 L15 28 M15 15 L28 15" stroke="#c9a96e" stroke-width="1" opacity="0.3"/>
+      <circle cx="5" cy="5" r="3" fill="#c0485a" opacity="0.3"/>
+    </svg>
+    <svg class="hero-corner" style="bottom:20px;left:20px;width:80px;height:80px;transform:scaleY(-1);" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 5 L5 35 M5 5 L35 5" stroke="#c0485a" stroke-width="1.5" opacity="0.4"/>
+      <path d="M15 15 L15 28 M15 15 L28 15" stroke="#c9a96e" stroke-width="1" opacity="0.3"/>
+      <circle cx="5" cy="5" r="3" fill="#c0485a" opacity="0.3"/>
+    </svg>
+    <svg class="hero-corner" style="bottom:20px;right:20px;width:80px;height:80px;transform:scale(-1);" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M5 5 L5 35 M5 5 L35 5" stroke="#c0485a" stroke-width="1.5" opacity="0.4"/>
+      <path d="M15 15 L15 28 M15 15 L28 15" stroke="#c9a96e" stroke-width="1" opacity="0.3"/>
+      <circle cx="5" cy="5" r="3" fill="#c0485a" opacity="0.3"/>
+    </svg>
+
+    <p class="hero-monogram">✦ Kafi & Elsya ✦</p><br>
+    <h1 class="dlabel">12 Juni 2026</h1><br>
+    <div class="dsub">"A year has passed"</div>
+    <div class="hdiv">💕</div>
+    <p class="hero-quote">
+      Dari sekian banyak yang aku jalani sekarang,<br>waktu-waktu sama kamu adalah moment yang sangat berharga.
+    </p>
+    <div class="hero-names">Elsya Putri Azzahra</div>
+    <span class="shint">↓ scroll ↓</span>
+  </div>
+
+  <!-- Wave divider -->
+  <div class="wave-divider" style="background:var(--cream);">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:60px;">
+      <path d="M0,30 C240,60 480,0 720,30 C960,60 1200,0 1440,30 L1440,0 L0,0 Z" fill="#ffe4ec"/>
+    </svg>
+  </div>
+
+  <!-- Reasons section -->
+  <section class="rsec">
+    <div class="dot-pattern" style="right:0;top:0;width:220px;height:220px;opacity:.35;"></div>
+    <div class="si">
+      <p class="stag reveal">Dari Hati Kafi</p>
+      <h2 class="stitle reveal">Alasan Aku Mencintai Kamu</h2>
+
+      <!-- Ornament divider -->
+      <div class="ornament-divider reveal"><span>❧ ✿ ❧</span></div>
+
+      <div class="rgrid">
+        <div class="rcard reveal"><div class="rnum">1</div><p class="rtxt">Cara kamu tertawa, tulus, lepas, dan selalu berhasil membuat hari-hari aku lebih cerah tanpa kamu sadari.</p></div>
+        <div class="rcard reveal"><div class="rnum">2</div><p class="rtxt">Kamu selalu hadir saat butuh kamu, bahkan sebelum aku sempat minta. Kamu tahu isi hati aku tanpa kata.</p></div>
+        <div class="rcard reveal"><div class="rnum">3</div><p class="rtxt">Cara kamu peduli pada orang-orang di sekitar kamu mengajarkan aku arti kebaikan yang sesungguhnya.</p></div>
+        <div class="rcard reveal"><div class="rnum">4</div><p class="rtxt">Sama kamu, hal-hal kecil terasa luar biasa. secangkir kopi, perjalanan biasa, bahkan diam pun terasa nyaman.</p></div>
+        <div class="rcard reveal"><div class="rnum">5</div><p class="rtxt">Kamu buat aku menjadi versi terbaik dari diri aku sendiri, setiap hari, tanpa harus dipaksa.</p></div>
+        <div class="rcard reveal"><div class="rnum">6</div><p class="rtxt">Satu tahun ini penuh warna karena ada kamu, dan aku mau tahun-tahun berikutnya tetap sama kamu.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Wave divider -->
+  <div class="wave-divider" style="background:var(--soft);margin-top:-2px;">
+    <svg viewBox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none" style="height:60px;">
+      <path d="M0,0 C240,60 480,0 720,40 C960,60 1200,10 1440,40 L1440,60 L0,60 Z" fill="#fff8f9"/>
+    </svg>
+  </div>
+
+  <!-- Timeline -->
+  <section class="tsec">
+    <!-- Top decoration -->
+    <svg style="position:absolute;top:0;right:30px;opacity:.08;" width="120" height="120" viewBox="0 0 120 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <circle cx="60" cy="60" r="55" stroke="#c0485a" stroke-width="1"/>
+      <circle cx="60" cy="60" r="40" stroke="#c9a96e" stroke-width="1"/>
+      <circle cx="60" cy="60" r="25" stroke="#c0485a" stroke-width="1"/>
+    </svg>
+    <div class="si">
+      <p class="stag reveal">A One Year Journey</p>
+      <h2 class="stitle reveal">Satu Tahun Penuh Cerita</h2>
+      <div class="ornament-divider reveal"><span>❧ ✿ ❧</span></div>
+      <div class="tl reveal">
+        <div class="titem">
+          <p class="tdate">Momen Pertama</p>
+          <h3 class="tev">Kenangan Indah Pertama 🌟</h3>
+          <p class="tdesc">Dari berorganisasi bersama, menjadi berbagi cerita bersama. Kopi Klan Taman Heulang menjadi awal perjalanan aku sama kamu untuk coba memulai kenangan indah.</p>
+        </div>
+        <div class="titem">
+          <p class="tdate">12 Juni 2025</p>
+          <h3 class="tev">Hari Itu Kita Memulai ❤️</h3>
+          <p class="tdesc">Hari yang ngga akan pernah aku lupain, hari seorang Elsya setuju untuk jadi bagian perjalanan hidup aku. Di Kopi Nako Kuntum Tajur saat itu, hatiku berdebar kencang sekali.</p>
+        </div>
+        <div class="titem">
+          <p class="tdate">Perjalanan</p>
+          <h3 class="tev">Saat Kafi Semakin Yakin 💫</h3>
+          <p class="tdesc">Elsya, keyakinan aku sama kamu sekarang lahir dari semua momen yang sudah kita lewati. Dari caramu tersenyum, caramu memahami aku, hingga caramu menenangkan duniaku yang kadang bising. Bersamamu, semuanya terasa begitu tepat. momen sederhana yang punya makna besar.</p>
+        </div>
+        <div class="titem">
+          <p class="tdate">12 Juni 2026</p>
+          <h3 class="tev">Satu Tahun — Dan Seterusnya 💕</h3>
+          <p class="tdesc">Hari ini aku sama kamu merayakan satu tahun cerita kita, tawa, dan pertumbuhan bersama. Aku yakin sama kamu, karena sama kamu aku tidak hanya melihat masa kini yang bahagia, cara kita saling mendukung dan tumbuh bersama membuat aku tahu bahwa kamu adalah orang yang tepat untuk menemani setiap langkah aku ke depan.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Closing -->
+  <div class="csec">
+    <div class="dot-pattern" style="inset:0;opacity:.25;"></div>
+    <!-- Corner ornaments -->
+    <svg style="position:absolute;top:20px;left:20px;opacity:.2;" width="60" height="60" viewBox="0 0 60 60" fill="none">
+      <path d="M5 5 L5 30 M5 5 L30 5" stroke="#c0485a" stroke-width="2"/>
+    </svg>
+    <svg style="position:absolute;top:20px;right:20px;opacity:.2;transform:scaleX(-1);" width="60" height="60" viewBox="0 0 60 60" fill="none">
+      <path d="M5 5 L5 30 M5 5 L30 5" stroke="#c0485a" stroke-width="2"/>
+    </svg>
+    <svg style="position:absolute;bottom:20px;left:20px;opacity:.2;transform:scaleY(-1);" width="60" height="60" viewBox="0 0 60 60" fill="none">
+      <path d="M5 5 L5 30 M5 5 L30 5" stroke="#c0485a" stroke-width="2"/>
+    </svg>
+    <svg style="position:absolute;bottom:20px;right:20px;opacity:.2;transform:scale(-1);" width="60" height="60" viewBox="0 0 60 60" fill="none">
+      <path d="M5 5 L5 30 M5 5 L30 5" stroke="#c0485a" stroke-width="2"/>
+    </svg>
+    <div class="si" style="position:relative;z-index:1;text-align:center;">
+      <span class="bh reveal">💖</span>
+      <div class="ornament-divider reveal"><span>✦ ✦ ✦</span></div>
+      <h2 class="ctitle reveal">Happy Anniversary<br>Elsya Sayang</h2>
+      <p class="cquote reveal">"Kamu adalah rumah yang selalu mau aku pulangin. Terima kasih sudah hadir, terima kasih sudah mau sama aku terus."</p>
+      <p class="sig reveal">Dengan seluruh cintaku — Kafi 🌹</p>
+    </div>
+  </div>
+  <footer>&copy; 12 Juni 2026 &nbsp;·&nbsp; Kafi untuk Elsya &nbsp;·&nbsp; Dibuat dengan ❤️</footer>
+</div><!-- /home -->
+
+<!-- ══ GALLERY ══ -->
+<div class="page" id="pg-gallery">
+  <!-- Twinkling stars generated by JS -->
+  <div id="stars-container"></div>
+
+  <div class="ghead">
+    <p style="color:rgba(201,169,110,.4);font-size:.75rem;letter-spacing:.4em;text-transform:uppercase;margin-bottom:.5rem;">Kafi & Elsya</p>
+    <h1>Galeri Kita</h1>
+    <div class="ghead-frame">
+      <p style="color:rgba(255,255,255,.3);font-size:.75rem;letter-spacing:.2em;text-transform:uppercase;">Momen yang tersimpan di hati</p>
+    </div>
+  </div>
+
+  <!-- Decorative horizontal line -->
+  <div style="max-width:200px;margin:0 auto 2rem;display:flex;align-items:center;gap:.5rem;">
+    <div style="flex:1;height:1px;background:linear-gradient(to right,transparent,rgba(201,169,110,.3));"></div>
+    <span style="color:rgba(201,169,110,.4);font-size:1rem;">✦</span>
+    <div style="flex:1;height:1px;background:linear-gradient(to left,transparent,rgba(201,169,110,.3));"></div>
+  </div>
+
+  <div class="ggrid">
+    <div class="gi" onclick="openL(this)">
+      <div class="gph"><img src="images/21.jpeg" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div class="gov"><span>Momen pertama ✨</span></div>
+    </div>
+    <div class="gi" onclick="openL(this)">
+      <div class="gph"><img src="images/10.jpeg" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div class="gov"><span>Petualangan kita 🌅</span></div>
+    </div>
+    <div class="gi" onclick="openL(this)">
+      <div class="gph"><img src="images/2.jpeg" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div class="gov"><span>Senyummu duniaku 🌸</span></div>      
+    </div>
+    <div class="gi" onclick="openL(this)">
+      <div class="gph"><img src="images/7.jpeg" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div class="gov"><span>Merayakan kita 🥂</span></div>
+    </div>
+    <div class="gi" onclick="openL(this)">
+      <div class="gph"><img src="images/14.jpeg" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div class="gov"><span>Malam indah 🌙</span></div>
+    </div>
+    <div class="gi" onclick="openL(this)">
+      <div class="gph"><img src="images/12.jpeg" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div class="gov"><span>Favoritku 💕</span></div>
+    </div>
+    <div class="gi" onclick="openL(this)">
+      <div class="gph"><img src="images/22.jpeg" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div class="gov"><span>Bertugas bareng 💪🏻</span></div>
+    </div>
+    <div class="gi" onclick="openL(this)">
+      <div class="gph"><img src="images/27.jpeg" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div class="gov"><span>Hangat 👑</span></div>
+    </div>
+     <div class="gi" onclick="openL(this)">
+      <div class="gph"><img src="images/11.jpeg" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div class="gov"><span>Bergaul 🕶</span></div>
+    </div>
+      <div class="gi" onclick="openL(this)">
+      <div class="gph"><img src="images/20.jpeg" style="width: 100%; height: 100%; object-fit: cover;"></div>
+      <div class="gov"><span>Banyak banget 💫</span></div>
+    </div>
+  </div>
+
+<!--<p class="gnote">💡 <strong style="color:rgba(255,255,255,.4);">Cara ganti foto:</strong> Di <code>index.html</code>, temukan <code>class="gph"</code> lalu hapus div-nya dan ganti dengan <code>&lt;img src="nama-foto.jpg" alt="keterangan"&gt;</code>. Taruh file foto satu folder dengan index.html.</p> -->
+
+  <div class="lbox" id="lbox" onclick="closeL()">
+    <button class="lclose" onclick="closeL()">✕</button>
+    <img id="limg" src="" alt=""/>
+  </div>
+</div>
+
+<!-- ══ LETTER ══ -->
+<div class="page" id="pg-letter">
+  <div style="position:relative;width:100%;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:4rem 1.5rem;overflow:hidden;background:radial-gradient(ellipse at 0% 0%,#ffe8ed 0%,transparent 50%),radial-gradient(ellipse at 100% 100%,#fff3e0 0%,transparent 50%),linear-gradient(135deg,#fdf0f3 0%,#fff8ee 100%);">
+  <!-- Floating decos -->
+  <span class="letter-deco" style="top:8%;left:5%;font-size:3rem;animation-duration:7s;animation-delay:0s;">🌹</span>
+  <span class="letter-deco" style="top:15%;right:8%;font-size:2rem;animation-duration:9s;animation-delay:-3s;">✿</span>
+  <span class="letter-deco" style="bottom:20%;left:8%;font-size:2.5rem;animation-duration:8s;animation-delay:-5s;">💕</span>
+  <span class="letter-deco" style="bottom:10%;right:5%;font-size:3rem;animation-duration:6s;animation-delay:-2s;">🌸</span>
+  <!-- Small ornamental dots -->
+  <span style="position:absolute;top:30%;left:3%;color:rgba(192,72,90,.1);font-size:5rem;pointer-events:none;font-family:'Great Vibes',cursive;">Elsya</span>
+  <span style="position:absolute;bottom:25%;right:3%;color:rgba(192,72,90,.1);font-size:5rem;pointer-events:none;font-family:'Great Vibes',cursive;transform:rotate(-10deg);">Kafi</span>
+
+  <div class="lwrap">
+    <div class="ltop">
+      <h2>Surat For My Girlfriend</h2>
+      <div class="lfor">Dari Kafi Diandra Mufid</div>
+      <div class="lnames">Untuk Elsya Putri Azzahra 💕</div>
+    </div>
+    <div class="lseal">💌</div>
+    <div class="llines"></div>
+    <div class="lbody">
+      <p class="ldt">12 Juni 2026 · Spending a year with you</p>
+
+      <!-- ✏️ UBAH ISI SURAT DI SINI sesuai kata hatimu -->
+      <p class="lgr">Dear Elsya,</p>
+      <p class="ltxt" style="text-align: justify; text-indent: 40px;">
+        Selamat satu tahun, Elsya. Memikirkan kembali hari-hari yang sudah kita lewati, aku benar-benar bersyukur atas kehadiranmu di hidupku. Terima kasih telah memilih untuk berjalan di sampingku, membagi tawamu, dan meminjamkan bahumu di saat-saat sulit. Setahun ini menjadi jauh lebih bermakna karena ada kamu yang selalu setia menemani setiap langkahku.
+      </p>
+      <p class="ltxt" style="text-align: justify; text-indent: 40px;">
+        Aku masih ingat betul bagaimana kita memulai semuanya, dan tak terasa sekarang kita sudah mengukir begitu banyak cerita bersama. Dari obrolan random yang membuat kita tertawa lepas, momen-momen sederhana saat jalan bersama, hingga saat-saat kita saling diam namun tetap merasa nyaman. Setiap detik yang kita lalui telah berubah menjadi memori indah yang selalu berhasil membuatku tersenyum setiap kali mengingatnya.
+      </p>
+      <p class="ltxt" style="text-align: justify; text-indent: 40px;">
+        Terima kasih ya, Elsya, sudah menjadi pasangan yang luar biasa penyabar dan penuh pengertian. Terima kasih telah menerima segala kekuranganku dan selalu menyemangatiku untuk menjadi versi terbaik dari diriku sendiri. Caramu menyayangi dan mendengarkanku adalah hal yang paling menenangkan di dunia ini, dan aku merasa menjadi pria paling beruntung karena memilikimu.
+      </p>
+      <p class="ltxt" style="text-align: justify; text-indent: 40px;">
+        Satu tahun ini barulah awal dari perjalanan panjang kita. Menatap hari esok, aku tidak merasa takut lagi karena aku tahu ada kamu di sisiku. Semoga kita bisa terus saling menjaga, saling bertumbuh, dan melewati tahun-tahun berikutnya dengan cinta yang semakin kuat. Aku sayang kamu, Elsya, hari ini, esok, dan seterusnya.
+      </p>
+      <p class="ltxt" style="text-align: justify; text-indent: 40px;">
+        Selamat anniversary, Elsya Putri Azzahra. Semoga masih banyak tahun indah lagi yang akan kita tulis bersama. 💕
+      </p><br>
+      <p class="ltxt" style="text-align: center; padding: 0 30px;">
+        #25184<br>
+        #JANGANLUPAPULANG<br>
+        #JAGAKESEHATAN<br>
+        #INGETNAMAPALINGBELAKANG        
+      </p>
+      <div class="lsign">
+        <p>Dengan cinta yang tulus dari</p>
+        <span>Kafi Diandra Mufid 🌹</span>
+      </div>
+    </div>
+    <div class="wax-deco">💮</div>
+  </div>
+  </div>
+</div>
+
+<!-- ══ QUIZ ══ -->
+<div class="page" id="pg-quiz">
+  <div class="quiz-arch"></div>
+  <div class="quiz-arch" style="width:600px;height:240px;top:-120px;opacity:.04;border-color:rgba(192,72,90,.3);"></div>
+  <div id="qstars"></div>
+
+  <div class="qhead">
+    <p style="font-size:.7rem;letter-spacing:.4em;text-transform:uppercase;color:rgba(201,169,110,.4);margin-bottom:.5rem;">Untuk Elsya dari Kafi</p>
+    <h1>Quiz Kita 💝</h1>
+    <p>Seberapa Kenal Satu Sama Lain</p>
+    <p class="qhead-sub">"Jawab dengan jujur ya sayang"</p>
+  </div>
+
+  <div class="qcard">
+    <div class="qbar"><div class="qfill" id="qfill" style="width:0%"></div></div>
+    <div id="qmain">
+      <p class="qnum" id="qnum">Pertanyaan 1 dari 6</p>
+      <p class="qq" id="qq"></p>
+      <div class="qopts" id="qopts"></div>
+      <div class="qfb" id="qfb"></div>
+      <button class="qnxt" id="qnxt" onclick="nextQ()">Pertanyaan Berikutnya →</button>
+    </div>
+    <div class="qres" id="qres">
+      <div class="qrem" id="qrem">💖</div>
+      <h2 class="qrtitle" id="qrtitle"></h2>
+      <p class="qrmsg" id="qrmsg"></p>
+      <button class="qrst" onclick="restartQ()">Ulangi Quiz 🔄</button>
+    </div>
+  </div>
+</div>
+
+</div><!-- /main -->
+
+<script>
+// ═══ PETALS ═══
+(function(){
+  var p=document.getElementById('petals'),s=['🌸','🌺','💮','🌹','✿','❀'];
+  for(var i=0;i<28;i++){
+    var el=document.createElement('span');
+    el.className='petal';
+    el.textContent=s[Math.floor(Math.random()*s.length)];
+    el.style.cssText='left:'+Math.random()*100+'%;font-size:'+(0.7+Math.random()*1.3)+'rem;animation-duration:'+(8+Math.random()*12)+'s;animation-delay:'+(Math.random()*15)+'s;';
+    p.appendChild(el);
+  }
+})();
+
+// ═══ STARS for gallery & quiz ═══
+function makeStars(containerId,count){
+  var c=document.getElementById(containerId);
+  if(!c)return;
+  c.style.cssText='position:absolute;inset:0;pointer-events:none;overflow:hidden;';
+  for(var i=0;i<count;i++){
+    var s=document.createElement('div');
+    var sz=Math.random()*2.5+1;
+    s.className='star';
+    s.style.cssText='left:'+Math.random()*100+'%;top:'+Math.random()*100+'%;width:'+sz+'px;height:'+sz+'px;animation-duration:'+(2+Math.random()*4)+'s;animation-delay:'+(Math.random()*5)+'s;';
+    c.appendChild(s);
+  }
+}
+makeStars('stars-container',80);
+makeStars('qstars',60);
+
+// ═══ SIDEBAR ═══
+var sbOpen=true;
+function toggleSB(){
+  sbOpen=!sbOpen;
+  document.getElementById('sidebar').classList.toggle('hidden',!sbOpen);
+  document.getElementById('main').classList.toggle('wide',!sbOpen);
+  var t=document.getElementById('tog');
+  t.classList.toggle('out',!sbOpen);
+  t.textContent=sbOpen?'☰':'▶';
+}
+
+// ═══ NAVIGATION ═══
+function goTo(id){
+  document.querySelectorAll('.page').forEach(function(p){p.classList.remove('on');});
+  document.querySelectorAll('.nbtn').forEach(function(b){b.classList.remove('on');});
+  document.getElementById('pg-'+id).classList.add('on');
+  document.getElementById('n-'+id).classList.add('on');
+  window.scrollTo({top:0,behavior:'smooth'});
+  setTimeout(initReveal,100);
+}
+
+// ═══ SCROLL REVEAL ═══
+function initReveal(){
+  var obs=new IntersectionObserver(function(entries){
+    entries.forEach(function(e){if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target);}});
+  },{threshold:.1});
+  document.querySelectorAll('.reveal:not(.vis)').forEach(function(el){obs.observe(el);});
+}
+initReveal();
+
+// ═══ LIGHTBOX ═══
+function openL(card){var img=card.querySelector('img');if(!img)return;document.getElementById('limg').src=img.src;document.getElementById('lbox').classList.add('open');}
+function closeL(){document.getElementById('lbox').classList.remove('open');}
+
+// ═══ QUIZ ═══
+// ✏️ Ubah pertanyaan & jawaban sesuai kisah Kafi & Elsya!
+var QS=[
+  {
+    q:"Apa hewan favorit Kafi dan Elsya?",
+    o:["Kucing dan Paus","Serigala dan Paus","Lumba-Lumba dan Kelinci","Kucing dan Anjing"],
+    a:0,
+    fc:"Betul banget! ingat dengan baik 💕",
+    fw:"Eits, ingat lagi ya Elsya~ Jawabannya: Kucing dan Paus 😄"
+  },
+  {
+    q:"Apa comfort food Elsya?",
+    o:["Ramen dan Basreng","Ramen dan Dimsum","Sushi dan Sashimi","Sushi dan Risol"],
+    a:1,
+    fc:"Yes! benar-benar memperhatikan banget 🥺",
+    fw:"Hehe, jawabannya Ramen dan Dimsum! Kalo bingung langsung cari Ramen terdekat 🍳"
+  },
+  {
+    q:"Apa chat pertama Kafi ke Elsya?",
+    o:["eca cantik banget","masyaallah ecaa","mau ga matematika gua?","minal aidin ya ca"],
+    a:1,
+    fc:"Kamu ingat! Itu momen yang tidak terlupakan buat Kafi 🥰",
+    fw:"Jawabannya: masyaallah ecaa — modus banget kan 😁"
+  },
+  {
+    q:"Lagu favorit Kafi All-time?",
+    o:["Say You Won't Let Go","keepyousafe","Blue Jeans","Night Changes"],
+    a:0,
+    fc:"Ihh ingat lagu aku! 🎵💕",
+    fw:"Yah, lupa ya? Dengerin lagi gih~ 🎵"
+  },
+  {
+    q:"Hewan yang paling ditakutin Kafi",
+    o:["Ular","Burung Hantu","Harimau","Laba-Laba"],
+    a:3,
+    fc:"Tepat banget 🏠💕",
+    fw:"Jawabannya: laba-laba atuhhh 🏠"
+  },
+  {
+    q:"Kata-kata dari Kafi yang paling membekas?",
+    o:["25184","Jangan Lupa Pulang","Jaga Kesehatan","Inget Nama Paling Belakang"],
+    a:3,
+    fc:"Kamu tahu jawabannya karena kamu juga merasakannya 💕",
+    fw:"Semua benar kecuali 25184, Soalnya itumah dari kamu 🥰"
+  }
+];
+
+var curQ=0,score=0,answered=false;
+
+function renderQ(){
+  var d=QS[curQ];
+  document.getElementById('qnum').textContent='Pertanyaan '+(curQ+1)+' dari '+QS.length;
+  document.getElementById('qq').textContent=d.q;
+  document.getElementById('qfill').style.width=(curQ/QS.length*100)+'%';
+  var opts=document.getElementById('qopts');
+  opts.innerHTML='';
+  d.o.forEach(function(opt,i){
+    var b=document.createElement('button');b.className='qopt';b.textContent=opt;
+    b.onclick=function(){selQ(i);};opts.appendChild(b);
+  });
+  document.getElementById('qfb').className='qfb';
+  document.getElementById('qfb').textContent='';
+  document.getElementById('qnxt').className='qnxt';
+  answered=false;
+}
+
+function selQ(idx){
+  if(answered)return;answered=true;
+  var d=QS[curQ],opts=document.querySelectorAll('.qopt'),fb=document.getElementById('qfb');
+  opts.forEach(function(b,i){
+    if(i===d.a)b.classList.add('cor');
+    else if(i===idx&&idx!==d.a)b.classList.add('wrg');
+    else b.classList.add('rev');
+  });
+  if(idx===d.a){score++;fb.className='qfb corf show';fb.textContent='✅ '+d.fc;}
+  else{fb.className='qfb wrgf show';fb.textContent='❌ '+d.fw;}
+  var n=document.getElementById('qnxt');n.className='qnxt show';
+  if(curQ===QS.length-1)n.textContent='Lihat Hasil 💝';
+}
+
+function nextQ(){
+  curQ++;
+  if(curQ>=QS.length){showRes();return;}
+  renderQ();
+}
+
+function showRes(){
+  document.getElementById('qmain').style.display='none';
+  document.getElementById('qres').classList.add('show');
+  document.getElementById('qfill').style.width='100%';
+  var pct=score/QS.length,em,ti,msg;
+  if(pct===1){
+    em='💖';ti='Sempurna, Elsya!';
+    msg='Skor Elsya '+score+'/'+QS.length+' — kamu benar-benar mengenal Kafi dengan sangat baik. Ini bukti bahwa Elsya selalu memperhatikan, selalu hadir. Terima kasih ya, Elsya 🌹';
+  }else if(pct>=.7){
+    em='🥰';ti='Luar Biasa!';
+    msg='Skor Elsya '+score+'/'+QS.length+' — hampir sempurna! Elsya sangat memperhatikan Kafi. Sisanya bisa kita pelajari bersama ya 💕';
+  }else if(pct>=.5){
+    em='😊';ti='Lumayan, Elsya~';
+    msg='Skor Elsya '+score+'/'+QS.length+' — masih banyak yang bisa kita ceritakan satu sama lain. Itu berarti petualangan Kafi & Elsya belum selesai 🌸';
+  }else{
+    em='😄';ti='Ada PR Nih, Elsya~';
+    msg='Skor Elsya '+score+'/'+QS.length+' — tapi tidak apa-apa! Yang penting Elsya ada di sini, bersama Kafi. Kita punya banyak waktu untuk saling mengenal lebih dalam 💕';
+  }
+  document.getElementById('qrem').textContent=em;
+  document.getElementById('qrtitle').textContent=ti;
+  document.getElementById('qrmsg').textContent=msg;
+}
+
+function restartQ(){
+  curQ=0;score=0;answered=false;
+  document.getElementById('qmain').style.display='block';
+  document.getElementById('qres').classList.remove('show');
+  renderQ();
+}
+
+renderQ();
+
+
+// ═══ LOGOUT ═══
+function showLogout(){
+  document.getElementById('logout-modal-bg').classList.add('open');
+}
+function hideLogout(){
+  document.getElementById('logout-modal-bg').classList.remove('open');
+}
+function doLogout(){
+  // tutup modal
+  hideLogout();
+
+  // tampilkan overlay transisi
+  var ov = document.getElementById('logout-overlay');
+  ov.classList.add('show');
+
+  setTimeout(function(){
+    // sembunyikan konten utama
+    document.getElementById('sidebar').style.visibility = 'hidden';
+    document.getElementById('main').style.visibility   = 'hidden';
+    document.getElementById('tog').style.visibility    = 'hidden';
+
+    // reset form login
+    document.getElementById('lc-name').value = '';
+    document.getElementById('lc-pass').value = '';
+    document.getElementById('lc-error').classList.remove('show');
+
+    // tampilkan kembali login screen
+    var ls = document.getElementById('login-screen');
+    ls.style.display  = 'flex';
+    ls.style.opacity  = '0';
+    ls.style.transform = 'scale(1.04)';
+    ls.classList.remove('hide');
+
+    // fade in login screen
+    setTimeout(function(){
+      ls.style.transition = 'opacity .6s ease, transform .6s ease';
+      ls.style.opacity    = '1';
+      ls.style.transform  = 'scale(1)';
+    }, 50);
+
+    // sembunyikan overlay logout
+    ov.classList.add('fade-out');
+    setTimeout(function(){
+      ov.classList.remove('show','fade-out');
+    }, 650);
+  }, 1400);
+}
+
+// Tutup modal kalau klik di luar kotak
+document.getElementById('logout-modal-bg').addEventListener('click', function(e){
+  if(e.target === this) hideLogout();
+});
+// Escape key juga tutup modal
+document.addEventListener('keydown', function(e){
+  if(e.key === 'Escape') hideLogout();
+});
+
+
+// ✏️ UBAH PASSWORD DI SINI — sekarang: "12062025" (tanggal anniversary)
+var LOGIN_NAME = 'sayang';          // nama yang diterima (huruf kecil)
+var LOGIN_PASS = '12062025';       // password
+
+// Sembunyikan sidebar & main sampai login berhasil
+document.getElementById('sidebar').style.visibility = 'hidden';
+document.getElementById('main').style.visibility   = 'hidden';
+document.getElementById('tog').style.visibility    = 'hidden';
+
+// Enter key support
+document.addEventListener('DOMContentLoaded', function(){
+  ['lc-name','lc-pass'].forEach(function(id){
+    var el = document.getElementById(id);
+    if(el) el.addEventListener('keydown', function(e){ if(e.key==='Enter') doLogin(); });
+  });
+});
+
+function togglePass(){
+  var inp = document.getElementById('lc-pass');
+  var btn = document.getElementById('lc-eye-btn');
+  if(inp.type === 'password'){
+    inp.type = 'text';
+    btn.textContent = '🙈';
+  } else {
+    inp.type = 'password';
+    btn.textContent = '👁';
+  }
+}
+
+function doLogin(){
+  var name = document.getElementById('lc-name').value.trim().toLowerCase();
+  var pass = document.getElementById('lc-pass').value.trim();
+  var err  = document.getElementById('lc-error');
+
+  // Validasi: nama harus mengandung "sayang" DAN password harus benar
+  var nameOk = name.indexOf(LOGIN_NAME) !== -1;
+  var passOk = pass === LOGIN_PASS;
+
+  if(nameOk && passOk){
+    err.classList.remove('show');
+
+    // Tampilkan success overlay
+    var suc = document.getElementById('login-success');
+    suc.classList.add('show');
+
+    // Setelah 1.8 detik, fade out login screen & success lalu tampilkan konten
+    setTimeout(function(){
+      document.getElementById('login-screen').classList.add('hide');
+      suc.classList.add('fade-out');
+      // Reveal konten utama
+      document.getElementById('sidebar').style.visibility = 'visible';
+      document.getElementById('main').style.visibility   = 'visible';
+      document.getElementById('tog').style.visibility    = 'visible';
+      // Hapus kedua overlay setelah animasi selesai
+      setTimeout(function(){
+        document.getElementById('login-screen').style.display = 'none';
+        suc.style.display = 'none';
+      }, 750);
+    }, 1800);
+
+  } else {
+    // Shake & tampilkan error
+    err.classList.remove('show');
+    void err.offsetWidth; // reflow untuk restart animasi
+    err.classList.add('show');
+    document.getElementById('lc-pass').value = '';
+    document.getElementById('lc-pass').focus();
+  }
+}
+
+</script>
+</body>
+</html>
+
